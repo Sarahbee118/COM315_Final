@@ -1,0 +1,16 @@
+function UserProgram
+disp("Please input the name of a 30 sound file you would like to estimate the tempo of")
+x = input('Or if you would like to see the training data estimated type "train" >')
+
+
+if x == "train"
+    for q = 1:20
+        number = int2str(q);
+        fileextension = ".wav";
+        trainfilewhole = strcat("train",number,fileextension);
+        trainfilewhole
+        TempoTemplateMatching(trainfilewhole)
+    end
+else
+    TempoTemplateMatching(x)
+end
